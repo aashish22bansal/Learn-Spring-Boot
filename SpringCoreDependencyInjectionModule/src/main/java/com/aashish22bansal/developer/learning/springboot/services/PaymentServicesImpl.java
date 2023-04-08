@@ -14,7 +14,11 @@ public class PaymentServicesImpl implements PaymentService {
 	
 	/**
 	 * @author Aashish Bansal
-	 * Here, the annotation @Autowired will tell Spring that
+	 * Here, the annotation @Autowired will tell Spring that the PaymentDAO Dependency should be
+	 * automatically wired at runtime. So, Spring will search for the implementation class of 
+	 * the interface PaymentDAO, which is PaymentDAOImple, and create a Bean of this type (because
+	 * we have already marked it with the stereotype Annotation) and inject it into the field of
+	 * "dao". 
 	 */
 	@Autowired
 	private PaymentDAO dao;
