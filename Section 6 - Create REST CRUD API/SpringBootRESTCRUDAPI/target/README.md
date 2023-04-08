@@ -1,0 +1,1 @@
+We can run the JAR File using the command: java -jar SpringBootRESTCRUDAPI-0.0.1-SNAPSHOT.jar
