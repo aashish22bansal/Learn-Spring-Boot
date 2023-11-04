@@ -1,11 +1,16 @@
 package com.aashish22bansal.developer.SpringBootRESTLogging.entities;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.stereotype.Component;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@EntityScan
+@Component("product")
 public class Product {
 	
 	@Id

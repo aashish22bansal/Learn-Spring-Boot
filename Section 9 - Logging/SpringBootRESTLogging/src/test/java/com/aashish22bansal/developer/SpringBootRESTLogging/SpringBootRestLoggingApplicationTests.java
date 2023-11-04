@@ -8,6 +8,7 @@ class SpringBootRestLoggingApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
