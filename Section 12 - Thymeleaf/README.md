@@ -55,3 +55,9 @@
     <p>We will gather the student information and process it in the Controller. To associate the form with Thymeleaf, we will use the required tags within the <code>form</code> element.</p>
     <p>Using the <code>object</code> tag, the values sent via the object will automatically be rendered into the form provided we use another tag <code>field</code> along with it. These tags will automatically retrieve and assign values to the respective data members from the object. This is <b>Two-way Binding</b>. If the values are not provided in the Data Member, then the default values would be selected.</p>
 </div>
+
+## Process Form Data
+<div>
+    <p>To process the data within the HTML Form, we will use Thymeleaf's <code>action</code> tag to which we will provide the <code>RequestMapping</code> URI. Now, within the Controller class, we will use the <code>@ModelAttribute</code> annotation with the <code>Student</code> object that we will pass and send a response to the next page (<code>result</code> page). We can process the information and send it according to our need.</p>
+    <p>We can send the data via the Post Method as well.</p>
+</div>

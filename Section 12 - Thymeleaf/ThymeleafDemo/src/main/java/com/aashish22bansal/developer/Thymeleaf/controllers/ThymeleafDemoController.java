@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -93,6 +94,22 @@ public class ThymeleafDemoController {
 		
 		// Passing the Student() Object to the View.
 		mav.addObject("student", student);
+		
+		// Returning mav
+		return mav;
+	}
+	
+	/**
+	 * @param student object takes the data from the student form from the template.
+	 * @return
+	 */
+	@RequestMapping("/saveStudent")
+	public ModelAndView saveStudent(@ModelAttribute Student student) {
+		// Create a new ModalAndView Object
+		ModelAndView mav = new ModelAndView("result"); // Pass the template as a Parameter
+		
+		System.out.println(student.getName());
+		System.out.println(student.getScore());
 		
 		// Returning mav
 		return mav;
