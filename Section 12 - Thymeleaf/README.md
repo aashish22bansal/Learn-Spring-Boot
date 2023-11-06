@@ -19,7 +19,12 @@
     <p>The first syntax is the <code>@{url}</code> syntax. Within the curly braces, we can use a URL that is relative to the current base URL. For example, if we are including CSS file, then we will use the HTML <code>link</code> element and inside it we will be providing the path to the CSS file as <code>@{/css/my.css}</code>.</p>
     <p>The second syntax is the <code>${}</code> within which we can use the expression language to read all the data that is coming from the controller. Typically, our controller in Spring MVC will send a Model Map with all the data that we can read using <code>${}</code>. We can use the names of the modal object and their properties.</p>
     <p>The last syntax is <code>*{}</code> which is used in HTML Forms to bind a modal property to the form field. Here, we have the input type as <code>text</code> and we bind the input type <code>text</code> to a field called <code>studentName</code> on the modal object as:</p>
-    <code>< input type="text" th:field=*{studentName} ></code>
+    <center><code>< input type="text" th:field=*{studentName} ></code></center>
     <p>There will be a Model Object called <code>Student.java</code> within which we have <code>studentName</code>. This form field will automatically be bound to it. The data comes from the controller and it will be taken automatically and displayed in the form and when this form is submitted, the data will taken and placed into the Modal Object automatically by Spring.</p>
     <p>In addition to this, Thymeleaf also provide us with some tags that we can use.</p>
+</div>
+
+## Sending Data to Template
+<div>
+    <p>Sending of data from Controller to the Template is known as Dynamic Rendering. Now, for this, the method should return an object of type <code>ModelAndView</code> because we want to send data to a view. To this object, we will add the object with a Key-value pair passed as a parameter and then we will return the <code>ModelAndView</code> Object.</p>
 </div>

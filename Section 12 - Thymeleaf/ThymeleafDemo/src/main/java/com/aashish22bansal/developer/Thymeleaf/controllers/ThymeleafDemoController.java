@@ -18,4 +18,7 @@ public class ThymeleafDemoController {
 	public String demoMethod() {
 		return "index";
 	}
+	
+	@RequestMapping("/sendData")
+	public ModalAndView sendData() {}
 }
