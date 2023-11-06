@@ -78,4 +78,23 @@ public class ThymeleafDemoController {
 		// Returning mav
 		return mav;
 	}
+	
+	@RequestMapping("/studentForm")
+	public ModelAndView displayStudentForm() {
+		// Create a new ModalAndView Object
+		ModelAndView mav = new ModelAndView("studentForm"); // Pass the template as a Parameter
+		
+		// Creating a Student Object
+		Student student = new Student();
+		
+		// Assigning values
+		student.setName("Student A");
+		student.setScore(100);
+		
+		// Passing the Student() Object to the View.
+		mav.addObject("student", student);
+		
+		// Returning mav
+		return mav;
+	}
 }

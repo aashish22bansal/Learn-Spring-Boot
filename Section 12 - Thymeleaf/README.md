@@ -49,3 +49,9 @@
 <div>
     <p>We can render multiple records using Thymeleaf's <code>each</code> tag.</p>
 </div>
+
+## Create an HTML Form
+<div>
+    <p>We will gather the student information and process it in the Controller. To associate the form with Thymeleaf, we will use the required tags within the <code>form</code> element.</p>
+    <p>Using the <code>object</code> tag, the values sent via the object will automatically be rendered into the form provided we use another tag <code>field</code> along with it. These tags will automatically retrieve and assign values to the respective data members from the object. This is <b>Two-way Binding</b>. If the values are not provided in the Data Member, then the default values would be selected.</p>
+</div>
