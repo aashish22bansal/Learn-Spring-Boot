@@ -44,3 +44,8 @@
 <div>
     <p>For this, we can add a new method to the Controller, named <code>getStudent()</code>. Now, if we do not provide values to the user-defined Object, then it will show the default values for the data members of the object.</p>
 </div>
+
+## Rendering Multiple Records
+<div>
+    <p>We can render multiple records using Thymeleaf's <code>each</code> tag.</p>
+</div>

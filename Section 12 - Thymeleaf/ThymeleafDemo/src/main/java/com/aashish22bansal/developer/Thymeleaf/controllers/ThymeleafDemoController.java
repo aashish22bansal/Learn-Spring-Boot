@@ -1,5 +1,8 @@
 package com.aashish22bansal.developer.Thymeleaf.controllers;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -46,6 +49,31 @@ public class ThymeleafDemoController {
 		
 		// Passing the Student() Object to the View.
 		mav.addObject("student", student);
+		
+		// Returning mav
+		return mav;
+	}
+	
+	@RequestMapping("/students")
+	public ModelAndView getStudents() {
+		// Create a new ModalAndView Object
+		ModelAndView mav = new ModelAndView("studentList"); // Pass the template as a Parameter
+		
+		// Creating a Student Object
+		Student student1 = new Student();
+		Student student2 = new Student();
+		
+		// Assigning values
+		student1.setName("Student A");
+		student1.setScore(100);
+		student2.setName("Student B");
+		student2.setScore(90);
+		
+		// Creating an ArrayList of Student objects
+		List<Student> students = Arrays.asList(student1, student2);
+		
+		// Passing the Student() Object to the View.
+		mav.addObject("students", students);
 		
 		// Returning mav
 		return mav;
