@@ -34,3 +34,8 @@
     <p>Within the template file <code>data.html</code>, we will define a new namespace with the <code>html</code> tag as using the <code>xmlns:PREFIX="NAMESPACE_NAME"</code> attribute, where the <code>PREFIX</code> is <code>th</code> (which could be anything) representing Thymeleaf and the <code>NAMESPACE_NAME</code> for Thymeleaf is the website for Thymeleaf, <code>http://www.thymeleaf.org/</code>. So, the complete attribute becomes <code>xmlns:th="http://www.thymeleaf.org/</code>. Now, we can use all the tags that are available within the namespace. The <code>th</code> is the prefix that we will be using inside the <code>html</code> tag.</p>
     <p>Now, suppose we want to take the message that comes from the Controller and render it as text as: <code>th:text="${message}"</code>. This is the model that is coming from the Controller.</p>
 </div>
+
+## Disable Cache
+<div>
+    <p>Thymeleaf dynamically resolves the data that comes from the Controller and it will generate the final HTML file for us. When it does that it does cache the output of that HTML file into cache memory so that the clients can quickly get the responses when they access the page later. But sometimes it could be a problem, for example, if we were to add some static content to the HTML template file, then when we try to refresh the page, we might not see the update page because the page displayed was fetched from the cache memory. Now, to prevent this from happening, we can turn off the caching by adding the property <code>spring.thymeleaf.cache=false</code> in the <code>application.properties</code> file.</p>
+</div>
