@@ -28,3 +28,9 @@
 <div>
     <p>Sending of data from Controller to the Template is known as Dynamic Rendering. Now, for this, the method should return an object of type <code>ModelAndView</code> because we want to send data to a view. To this object, we will add the object with a Key-value pair passed as a parameter and then we will return the <code>ModelAndView</code> Object.</p>
 </div>
+
+## Create a Template
+<div>
+    <p>Within the template file <code>data.html</code>, we will define a new namespace with the <code>html</code> tag as using the <code>xmlns:PREFIX="NAMESPACE_NAME"</code> attribute, where the <code>PREFIX</code> is <code>th</code> (which could be anything) representing Thymeleaf and the <code>NAMESPACE_NAME</code> for Thymeleaf is the website for Thymeleaf, <code>http://www.thymeleaf.org/</code>. So, the complete attribute becomes <code>xmlns:th="http://www.thymeleaf.org/</code>. Now, we can use all the tags that are available within the namespace. The <code>th</code> is the prefix that we will be using inside the <code>html</code> tag.</p>
+    <p>Now, suppose we want to take the message that comes from the Controller and render it as text as: <code>th:text="${message}"</code>. This is the model that is coming from the Controller.</p>
+</div>

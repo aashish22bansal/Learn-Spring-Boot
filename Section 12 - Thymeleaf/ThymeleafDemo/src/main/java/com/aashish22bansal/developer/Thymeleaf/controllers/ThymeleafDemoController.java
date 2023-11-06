@@ -2,6 +2,7 @@ package com.aashish22bansal.developer.Thymeleaf.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Aashish Bansal
@@ -20,5 +21,12 @@ public class ThymeleafDemoController {
 	}
 	
 	@RequestMapping("/sendData")
-	public ModalAndView sendData() {}
+	public ModelAndView sendData() {
+		// Create a new ModalAndView Object
+		ModelAndView mav = new ModelAndView("data"); // Pass the template as a Parameter
+		
+		mav.addObject("message", "Thymeleaf Demo"); // Format mav.addObject("ATTRIBUTE", "VALUE_ASSIGNED_TO_ATTRIBUTE")
+		
+		return mav;
+	}
 }
