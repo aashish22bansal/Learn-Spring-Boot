@@ -12,3 +12,14 @@
     <p>The key dependency for this is <code>spring-boot-starter-thymeleaf</code> dependency.</p>
     <p>Within this project, we will create a new controller within which we will specify the Template Name (without the <code>.html</code> extension) on the appropriate request URLs. Then, in the <code>/src/main/resources/templates</code> folder, we will create a new template file with the same template name and write the required code in it. So, now upon execution of the project, we will see the same template name when we move to that particular URL.</p>
 </div>
+
+## Special Syntax
+<div>
+    <p>Thymeleaf provides us a special syntax that makes our template (or HTML) pages dynamic.</p>
+    <p>The first syntax is the <code>@{url}</code> syntax. Within the curly braces, we can use a URL that is relative to the current base URL. For example, if we are including CSS file, then we will use the HTML <code>link</code> element and inside it we will be providing the path to the CSS file as <code>@{/css/my.css}</code>.</p>
+    <p>The second syntax is the <code>${}</code> within which we can use the expression language to read all the data that is coming from the controller. Typically, our controller in Spring MVC will send a Model Map with all the data that we can read using <code>${}</code>. We can use the names of the modal object and their properties.</p>
+    <p>The last syntax is <code>*{}</code> which is used in HTML Forms to bind a modal property to the form field. Here, we have the input type as <code>text</code> and we bind the input type <code>text</code> to a field called <code>studentName</code> on the modal object as:</p>
+    <code>< input type="text" th:field=*{studentName} ></code>
+    <p>There will be a Model Object called <code>Student.java</code> within which we have <code>studentName</code>. This form field will automatically be bound to it. The data comes from the controller and it will be taken automatically and displayed in the form and when this form is submitted, the data will taken and placed into the Modal Object automatically by Spring.</p>
+    <p>In addition to this, Thymeleaf also provide us with some tags that we can use.</p>
+</div>
