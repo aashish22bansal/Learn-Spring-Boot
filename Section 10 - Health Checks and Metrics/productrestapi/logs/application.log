@@ -932,3 +932,10 @@ Using generated security password: f9d2df29-0326-4bf0-b571-c6a7148183c8
 2023-11-05 00:15:31.339  INFO 27804 --- [RMI TCP Connection(11)-127.0.0.1] o.a.c.c.C.[.[localhost].[/productapi]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2023-11-05 00:15:31.339  INFO 27804 --- [RMI TCP Connection(11)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2023-11-05 00:15:31.354  INFO 27804 --- [RMI TCP Connection(11)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2023-11-05 02:05:05.142  INFO 27804 --- [RMI TCP Connection(124)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-05 02:05:05.146  INFO 27804 --- [RMI TCP Connection(124)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31c88ec8: startup date [Sun Nov 05 00:15:21 IST 2023]; root of context hierarchy
+2023-11-05 02:05:05.180  INFO 27804 --- [RMI TCP Connection(124)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2023-11-05 02:05:05.182  INFO 27804 --- [RMI TCP Connection(124)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2023-11-05 02:05:05.185  INFO 27804 --- [RMI TCP Connection(124)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-05 02:05:05.195  INFO 27804 --- [RMI TCP Connection(124)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-05 02:05:05.208  INFO 27804 --- [RMI TCP Connection(124)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
