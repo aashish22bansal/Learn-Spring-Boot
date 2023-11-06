@@ -39,3 +39,8 @@
 <div>
     <p>Thymeleaf dynamically resolves the data that comes from the Controller and it will generate the final HTML file for us. When it does that it does cache the output of that HTML file into cache memory so that the clients can quickly get the responses when they access the page later. But sometimes it could be a problem, for example, if we were to add some static content to the HTML template file, then when we try to refresh the page, we might not see the update page because the page displayed was fetched from the cache memory. Now, to prevent this from happening, we can turn off the caching by adding the property <code>spring.thymeleaf.cache=false</code> in the <code>application.properties</code> file.</p>
 </div>
+
+## Sending Object Data
+<div>
+    <p>For this, we can add a new method to the Controller, named <code>getStudent()</code>. Now, if we do not provide values to the user-defined Object, then it will show the default values for the data members of the object.</p>
+</div>

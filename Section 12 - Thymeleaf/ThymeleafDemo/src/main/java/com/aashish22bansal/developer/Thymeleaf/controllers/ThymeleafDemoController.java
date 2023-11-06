@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.aashish22bansal.developer.Thymeleaf.model.Student;
+
 /**
  * @author Aashish Bansal
  * The @Controller annotation will make this class as a MVC Controller.
@@ -27,6 +29,25 @@ public class ThymeleafDemoController {
 		
 		mav.addObject("message", "Thymeleaf Demo"); // Format mav.addObject("ATTRIBUTE", "VALUE_ASSIGNED_TO_ATTRIBUTE")
 		
+		return mav;
+	}
+	
+	@RequestMapping("/student")
+	public ModelAndView getStudent() {
+		// Create a new ModalAndView Object
+		ModelAndView mav = new ModelAndView("student"); // Pass the template as a Parameter
+		
+		// Creating a Student Object
+		Student student = new Student();
+		
+		// Assigning values
+		student.setName("Student A");
+		student.setScore(100);
+		
+		// Passing the Student() Object to the View.
+		mav.addObject("student", student);
+		
+		// Returning mav
 		return mav;
 	}
 }
