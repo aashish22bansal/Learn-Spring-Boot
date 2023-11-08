@@ -1,0 +1,8 @@
+# Database Caching
+
+## Introduction
+
+### Caching
+<div>
+    <p>We know that, when the clients access our application which uses an ORM Tool, like, Hibernate, to load/read the data, then the ORM Tool will execute a SELECT Query internally against the Database Table to get the data and then convert the data into, then hand over the data to our application so that we can send it back to the client as required. Everytime the client reads some data from our application, then our application or the ORM Tool will execute that SELECT Statement which either be a simple SELECT Query or a SELECT Query with multiple tables (with JOINs). So, instead of repeating the same read operation multiple times, we tend to use the concept of Caching using Cache Memory. Caching is storing the data or an object in a temporary location. So, when the request comes in for the very first time, then these ORM Tools or Caching Frameworks will read the data, convert them into object and store that object into a temporary memory location or even to the disk. This process is called Caching, so next time when the request comes in, then these ORM Tools or Caching Frameworks will check if the data for that particular request exists in the cache or not. If it is there, then there no database query will be executed or database communication because simply the data from the cache object would be taken, processed and sent back to the client. This helps in improving the performance of the application. This cache will be refreshed everytime the database is updated. If the database is deleted, then the cache memory related to it will also be deleted.</p>
+</div>
