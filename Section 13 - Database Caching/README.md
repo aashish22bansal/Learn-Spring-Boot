@@ -41,5 +41,5 @@
 
 ## Add Maven Dependencies
 <div>
-    <p></p>    
+    <p>We will add the <code>spring-boot-starter-cache</code> dependency to the <code>pom.xml</code> file. Now, we will also need to add the <b>Hazelcast Dependency</b> to the file. So, we will add <code>com.hazelcast</code> as <code>groupId</code>, and <code>hazelcast</code> and <code>hazelcast-spring</code> as <code>artifactId</code>. The <code>hazelcast</code> artifact brings in the Hazelcast JAR File and the <code>hazelcast-spring</code> brings in the Spring support for Hazelcast.</p>    
 </div>
