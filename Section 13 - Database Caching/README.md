@@ -43,3 +43,18 @@
 <div>
     <p>We will add the <code>spring-boot-starter-cache</code> dependency to the <code>pom.xml</code> file. Now, we will also need to add the <b>Hazelcast Dependency</b> to the file. So, we will add <code>com.hazelcast</code> as <code>groupId</code>, and <code>hazelcast</code> and <code>hazelcast-spring</code> as <code>artifactId</code>. The <code>hazelcast</code> artifact brings in the Hazelcast JAR File and the <code>hazelcast-spring</code> brings in the Spring support for Hazelcast.</p>    
 </div>
+
+## Configure Caching
+<div>
+    <p>We will create a new class <code>ProductCacheConfig</code> for the Products in the database which we want to cache. Within this, we will create the <code>cacheConfig()</code> method which will return the <code>Config</code> object with certain properties.</p>
+</div>
+
+## Enable and Use Caching
+<div>
+    <p>So, to enable and use caching, we will go to the Controller on which we want to enable caching. For the <code>ProductRestController</code> class, we can see that we will use the <code>getProduct()</code> method to fetch the products from the database and we want the query to execute only once by fetching the data object and placing it in the cache.</p>
+    <p>We will first go to the starting point of our application, which is <code>ProductrestapiApplication.java</code> file and use the <code>@EnableCaching</code> annotation on it to enable the caching for our application.</p>
+    <p>Then, we will go our Model class, <code>Product.java</code>, and this class should implement the serializable interface because internally hazelcast or any other cache provider will serialize our project entities to a file system or memory as required or to a database. So, we will implement the <code>Serializable</code> interface for caching to work. Along with this, we will add a default <code>serialVersionUID</code> which will take care of serialization for us.</p>
+    <p>Now, we will start using caching for the <code>getProduct()</code> method using the <code>@Cacheable("CACHE_NAME")</code> annotation and provide the <code>CACHE_NAME</code> which must be the same as the name provided in the Configuration.</p>
+    <p>For all the places where the Caching is happening, we should use the <code>@Transactional</code> annotation. Now, if the method is a READ-ONLY method, then we will tell that by setting the parameter <code>readOnly = true</code>. If we are using <code>@Transactional</code> on a CREATE or UPDATE method, then the parameter <code>readOnly=true</code> will not be provided.</p>
+    <p>Now, on the <code>deleteProduct()</code> method, we will use the <code>@CacheEvict(CACHE_NAME)</code> annotation to which we will pass the name of the cache which must be the same defined in the configuration.</p>
+</div>
