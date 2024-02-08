@@ -1,0 +1,2 @@
+# Spring Boot Profiles
+A Profile can be considered as an Identity that uniquely identifies a Configuration. We can create different profiles with the required Configurations and we can activate that particular profile as the requirement.
